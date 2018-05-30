@@ -16,6 +16,11 @@ pipeline {
 				sh 'mvn package'
 			}
 		}
+		stage('execute') {
+			steps {
+				sh 'java -jar miPrimerProyecto-1.0-SNAPSHOT.jar'
+			}
+		}
 		stage('end') {
 			steps {
 				echo 'Tarea2: finalizada con exito!!!'
