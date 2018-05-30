@@ -18,7 +18,7 @@ pipeline {
 		}
 		stage('execute') {
 			steps {
-				sh 'java -jar miPrimerProyecto-1.0-SNAPSHOT.jar'
+				sh 'mvn exec:java -Dexec.mainClass="com.maven.proyecto.App"'
 			}
 		}
 		stage('end') {
